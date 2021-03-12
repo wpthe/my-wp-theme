@@ -1,0 +1,6 @@
+{
+  "browsersync": {
+    "proxy": "http://mywp.loc",
+    "port": 9999
+  }
+}

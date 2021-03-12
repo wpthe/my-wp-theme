@@ -6,6 +6,8 @@
 		"file": "../index.php",
 		"versionPrefix": "Version:           "
 	},
+  "packageJson": "../sources/package.json",
+  "composerJson": "../composer.json",
 	"directories": [
 		"assets",
 		"blocks",
@@ -31,37 +33,5 @@
 		"single.php",
 		"style.css",
 		"wpml-config.xml"
-	],
-	"sources": {
-		"packageJson": "../sources/package.json",
-		"composerJson": "../composer.json",
-		"directories": [
-			"sources/fonts",
-			"sources/images",
-			"sources/scripts",
-			"sources/styles"
-		],
-		"files": [
-			"manager/.htaccess",
-			"manager/config-sample.js",
-			"manager/manager.js",
-			"manager/package.json",
-			"manager/package-lock.json",
-			"sources/.eslintignore",
-			"sources/.eslintrc",
-			"sources/.htaccess",
-			"sources/.stylelintignore",
-			"sources/.stylelintrc",
-			"sources/config-sample.js",
-			"sources/entry.js",
-			"sources/package.json",
-			"sources/package-lock.json",
-			"sources/webpack.config.js",
-			".editorconfig",
-			".gitignore",
-			"composer.json",
-			"composer.lock",
-			"phpcs.xml"
-		]
-	}
+	]
 }
