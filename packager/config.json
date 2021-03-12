@@ -1,0 +1,67 @@
+{
+	"name": "my-wp-theme",
+	"version": "0.9.0",
+	"output": "../",
+	"mainFile": {
+		"file": "../index.php",
+		"versionPrefix": "Version:           "
+	},
+	"directories": [
+		"assets",
+		"blocks",
+		"includes",
+		"languages",
+		"template-parts",
+		"templates",
+		"vendor"
+	],
+	"files": [
+		"404.php",
+		"comments.php",
+		"footer.php",
+		"functions.php",
+		"header.php",
+		"index.php",
+		"LICENSE",
+		"page.php",
+		"README.md",
+		"screenshot.png",
+		"searchform.php",
+		"sidebar.php",
+		"single.php",
+		"style.css",
+		"wpml-config.xml"
+	],
+	"sources": {
+		"packageJson": "../sources/package.json",
+		"composerJson": "../composer.json",
+		"directories": [
+			"sources/fonts",
+			"sources/images",
+			"sources/scripts",
+			"sources/styles"
+		],
+		"files": [
+			"manager/.htaccess",
+			"manager/config-sample.js",
+			"manager/manager.js",
+			"manager/package.json",
+			"manager/package-lock.json",
+			"sources/.eslintignore",
+			"sources/.eslintrc",
+			"sources/.htaccess",
+			"sources/.stylelintignore",
+			"sources/.stylelintrc",
+			"sources/config-sample.js",
+			"sources/entry.js",
+			"sources/package.json",
+			"sources/package-lock.json",
+			"sources/webpack.config.js",
+			".editorconfig",
+			".gitignore",
+			"composer.json",
+			"composer.lock",
+			"phpcs.xml"
+		]
+	}
+}

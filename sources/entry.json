@@ -1,0 +1,15 @@
+{
+  "main": [
+    "./styles/main.scss",
+    "./scripts/main.js"
+  ],
+  "admin-bar": [
+    "./styles/admin-bar.scss"
+  ],
+  "single": [
+    "./styles/single.scss"
+  ],
+  "template-sample": [
+    "./styles/templates/template-sample.scss"
+  ]
+}

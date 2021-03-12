@@ -1,0 +1,79 @@
+.my-notify {
+	position: fixed;
+	top: 0;
+	right: 20px;
+	z-index: 10000;
+	max-height: 100%;
+	padding: 1.5rem 0;
+	overflow-x: auto;
+}
+
+.my-notify__item {
+	margin: 0 0 1.5rem;
+	text-align: right;
+	opacity: 0;
+	transition: opacity $transition-duration ease;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.my-notify__item_shown {
+	opacity: 1;
+}
+
+.my-notify__item_success {
+
+	.my-notify__inner {
+		background: $success;
+	}
+}
+
+.my-notify__item_warning {
+
+	.my-notify__inner {
+		background: $warning;
+	}
+}
+
+.my-notify__item_danger {
+
+	.my-notify__inner {
+		background: $danger;
+	}
+}
+
+.my-notify__inner {
+	position: relative;
+	display: inline-block;
+	max-width: 400px;
+	padding: 2rem 4rem 2rem 3rem;
+	text-align: left;
+	color: $white;
+	background: $primary;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+}
+
+.my-notify__close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	margin: 0 0 1rem auto;
+	padding: 0 0 0.5rem 0.5rem;
+	color: rgba($white, 0.5);
+	background: none;
+	border: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+	}
+
+	> span::before {
+		font-size: 0.75rem;
+		line-height: 0.75;
+	}
+}

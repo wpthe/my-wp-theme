@@ -1,0 +1,39 @@
+@font-face {
+	font-weight: 400;
+	font-family: iconfont;
+	font-style: normal;
+	src: url(../fonts/iconfont/iconfont.eot);
+	src:
+		url(../fonts/iconfont/iconfont.eot#iefix) format("embedded-opentype"),
+		url(../fonts/iconfont/iconfont.ttf) format("truetype"),
+		url(../fonts/iconfont/iconfont.woff) format("woff"),
+		url(../fonts/iconfont/iconfont.svg#iconfont) format("svg");
+	font-display: block;
+}
+
+.my-icon {
+	display: inline-block;
+	font-weight: 400 !important;
+	speak: none !important;
+	font-family: iconfont, sans-serif !important;
+	text-align: center !important;
+	text-transform: none !important;
+	font-style: normal !important;
+	font-variant: normal !important;
+}
+
+.my-icon_bars::before {
+	content: "\e900";
+}
+
+.my-icon_close::before {
+	content: "\e901";
+}
+
+.my-icon_tel::before {
+	content: "\e902";
+}
+
+.my-icon_caret::before {
+	content: "\e903";
+}

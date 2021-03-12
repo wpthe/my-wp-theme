@@ -1,0 +1,19 @@
+$admin-bar-screen-tablet-max: 782px;
+$admin-bar-height: 32px;
+$admin-bar-height-mobile: 46px;
+
+body {
+	padding-top: $admin-bar-height !important;
+
+	@media (max-width: $admin-bar-screen-tablet-max) {
+		padding-top: $admin-bar-height-mobile !important;
+	}
+}
+
+.my-movebar {
+	margin-top: $admin-bar-height;
+
+	@media (max-width: $admin-bar-screen-tablet-max) {
+		margin-top: $admin-bar-height-mobile !important;
+	}
+}

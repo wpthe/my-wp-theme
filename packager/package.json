@@ -1,0 +1,26 @@
+{
+  "name": "my-wp-packager",
+  "version": "1.0.0",
+  "description": "Just my packager for the WordPress plugins and themes.",
+  "homepage": "https://github.com/dpripa/my-wp-theme/blob/main/my-wp-packager",
+  "license": "GPL <https://github.com/dpripa/my-wp-theme/blob/main/LICENSE>",
+  "contributors": [
+    {
+      "name": "Dmitry Pripa",
+      "email": "i@dpripa.com",
+      "homepage": "https://github.com/dpripa"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "node": "12",
+  "scripts": {
+    "package": "cd .. && composer install --no-dev && cd sources && npm run build && cd ../packager && node packager.js && cd .. && composer install"
+  },
+  "dependencies": {
+    "fs": "~0.0.1-security",
+    "archiver": "~5.0.0",
+    "log-beautify": "~1.2.0"
+  }
+}

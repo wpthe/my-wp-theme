@@ -1,0 +1,130 @@
+$movebar-width: 325px;
+
+.my-movebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	width: calc(100vw - 30px);
+	max-width: $movebar-width;
+	padding: 5rem 3rem;
+	overflow-y: auto;
+	background: $white;
+	outline: 0;
+	transform: translate3d(-$movebar-width, 0, 0);
+}
+
+.my-movebar,
+.my-movebar__coupled {
+	transition: transform $transition-duration * 1.5 ease-in-out;
+}
+
+.my-movebar__coupled {
+	position: relative;
+}
+
+.my-movebar_moved {
+	transform: translate3d(0, 0, 0);
+}
+
+.my-movebar__coupled_moved {
+	transform: translate3d($movebar-width, 0, 0);
+}
+
+.my-movebar__backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 997;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba($black, 0.5);
+}
+
+.my-movebar__close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	padding: 0;
+	font-size: 1rem;
+	color: $gray-light;
+	background: none;
+	border: 0;
+	transition: all $transition-duration ease;
+
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
+
+	&:active {
+		color: $primary-hover;
+	}
+}
+
+.my-movebar__search {
+	margin: 0 0 2rem;
+}
+
+.my-movebar__menu {
+
+	> ul {
+
+		> li {
+			margin: 0 0 0.75rem;
+
+			&:last-child {
+				margin: 0;
+			}
+
+			> a {
+				font-size: 1.0625rem;
+				color: $black;
+
+				> span { // icon
+					margin-right: 0.75rem;
+					color: $gray;
+					transition: all $transition-duration ease;
+
+					&::before { // visual vertical center fix
+						position: relative;
+						top: -1px;
+					}
+				}
+
+				&:hover,
+				&:focus {
+
+					&,
+					> span {
+						color: $primary;
+					}
+				}
+
+				&:active {
+
+					&,
+					> span {
+						color: $primary-hover;
+					}
+				}
+			}
+
+			&.current-menu-item > a {
+				color: $primary;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $primary-hover;
+				}
+
+				&:active {
+					color: $primary-active;
+				}
+			}
+		}
+	}
+}

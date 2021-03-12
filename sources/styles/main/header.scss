@@ -1,0 +1,123 @@
+.my-header {
+	position: relative;
+	padding: 2rem 0;
+	white-space: nowrap;
+	border-bottom: 1px solid $border-light;
+}
+
+.my-header__bars {
+	padding: 0;
+	font-size: 1.2rem;
+	color: $gray-light;
+	background: none;
+	border: 0;
+	transition: all $transition-duration ease;
+
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
+
+	&:active {
+		color: $primary-hover;
+	}
+}
+
+.my-header__logo {
+	display: block;
+
+	> img {
+		width: 100%;
+		max-width: 240px;
+
+		@media (max-width: $screen-sm-max) {
+			max-width: 200px;
+		}
+
+		@media (max-width: 300px) {
+			max-width: 160px;
+		}
+	}
+}
+
+.my-header__menu {
+	position: relative;
+
+	@media (min-width: $screen-lg-min) {
+		margin-right: 1.25rem;
+	}
+
+	@media (min-width: $screen-xl-min) {
+		margin-right: 1.75rem;
+	}
+
+	> ul {
+
+		> li {
+
+			@media (min-width: $screen-lg-min) {
+				margin-right: 1.75rem;
+			}
+
+			@media (min-width: $screen-xl-min) {
+				margin-right: 2rem;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+			> a {
+				font-size: 1.0625rem;
+				line-height: normal;
+				color: $black;
+
+				> span { // icon
+					margin-right: 0.75rem;
+					color: $gray;
+					transition: all $transition-duration ease;
+
+					&::before { // visual vertical center fix
+						position: relative;
+						top: -1px;
+					}
+				}
+
+				&:hover,
+				&:focus {
+
+					&,
+					> span {
+						color: $primary;
+					}
+				}
+
+				&:active {
+
+					&,
+					> span {
+						color: $primary-hover;
+					}
+				}
+			}
+
+			&.current-menu-item > a {
+				color: $primary;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $primary-hover;
+				}
+
+				&:active {
+					color: $primary-active;
+				}
+			}
+		}
+	}
+}
+
+.my-header__input {
+	max-width: 220px;
+}

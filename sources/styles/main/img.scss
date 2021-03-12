@@ -1,0 +1,11 @@
+.my-img {
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	opacity: 0;
+	transition: all $transition-duration ease;
+}
+
+.my-img_loaded {
+	opacity: 1;
+}
