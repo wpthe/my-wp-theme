@@ -4,7 +4,6 @@ my-wp-theme.zip
 
 node_modules
 vendor
-.env
 
 ~*
 ._*

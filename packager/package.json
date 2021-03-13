@@ -1,7 +1,7 @@
 {
   "name": "my-wp-packager",
   "version": "1.0.0",
-  "description": "Just my packager for the WordPress plugins and themes.",
+  "description": "Just my packager for the WordPress plugins and themes",
   "homepage": "https://github.com/dpripa/my-wp-theme/blob/main/my-wp-packager",
   "license": "GPL <https://github.com/dpripa/my-wp-theme/blob/main/LICENSE>",
   "contributors": [

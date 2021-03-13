@@ -1,13 +1,10 @@
 {
 	"name": "my-wp-theme",
 	"version": "0.9.0",
-	"output": "../",
-	"mainFile": {
-		"file": "../index.php",
-		"versionPrefix": "Version:           "
-	},
-  "packageJson": "../sources/package.json",
-  "composerJson": "../composer.json",
+	"basePath": "../",
+	"mainFile": "style.css",
+  "packageJson": "sources/package.json",
+  "composerJson": "composer.json",
 	"directories": [
 		"assets",
 		"blocks",

@@ -4,15 +4,15 @@ const log = require( 'log-beautify' );
 const config = require( './config' );
 
 function setMainFileVersion() {
-	if ( fs.existsSync( config.basePath + config.mainFile.file ) ) {
-		fs.readFile( config.basePath + config.mainFile.file, 'utf8', function( err, data ) {
+	if ( fs.existsSync( config.basePath + config.mainFile.path ) ) {
+		fs.readFile( config.basePath + config.mainFile.path, 'utf8', function( err, data ) {
 			if ( err ) {
 				return console.error( err );
 			}
 			const prefix = config.mainFile.versionPrefix;
 			const result = data.replace( prefix + /(\d+\.)(\d+\.)(\d)/g, prefix + config.version );
 
-			fs.writeFile( config.mainFile.file, result, 'utf8', function( err ) {
+			fs.writeFile( config.basePath + config.mainFile.path, result, 'utf8', function( err ) {
 				if ( err ) {
 					return console.error( err );
 				}

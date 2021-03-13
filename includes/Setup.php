@@ -53,8 +53,8 @@ final class Setup {
 	public function enqueue_assets() {
 		wp_enqueue_style( 'my_google_font', '//fonts.googleapis.com/css2?family=Jost&display=swap', false, null ); // @codingStandardsIgnoreLine WordPress.WP.EnqueuedResourceParameters.MissingVersion
 
-		Utils::enqueue_style( 'my_main', 'main' );
-		Utils::enqueue_script( 'my_main', 'main', array( 'jquery' ) );
+		Utils::enqueue_style( 'my_theme_main', 'main' );
+		Utils::enqueue_script( 'my_theme_main', 'main', array( 'jquery' ) );
 		wp_localize_script(
 			'my_main',
 			'myMain',
@@ -88,15 +88,15 @@ final class Setup {
 		);
 
 		if ( is_admin_bar_showing() ) {
-			Utils::enqueue_style( 'my_admin_bar', 'admin-bar' );
+			Utils::enqueue_style( 'my_theme_admin_bar', 'admin-bar' );
 		}
 
 		if ( is_singular() ) {
-			Utils::enqueue_style( 'my_single', 'single' );
+			Utils::enqueue_style( 'my_theme_single', 'single' );
 		}
 
 		if ( Templates::is( 'template-sample' ) ) {
-			Utils::enqueue_style( 'my_template_sample', 'template-sample' );
+			Utils::enqueue_style( 'my_theme_template_sample', 'template-sample' );
 		}
 	}
 

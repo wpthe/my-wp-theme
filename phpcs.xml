@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="SWPCS">
-	<description>Seniorro WordPress Coding Standards.</description>
+<ruleset name="MyWPCS">
+	<description>My WordPress Coding Standards</description>
 
 	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs"/>
 	<rule ref="WordPress"/>
@@ -14,7 +14,7 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="my_theme, my_core"/>
+			<property name="text_domain" type="array" value="my_theme, my_core, my_plugin"/>
 		</properties>
 		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain"/>
 	</rule>
