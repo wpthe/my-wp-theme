@@ -56,7 +56,7 @@ final class Setup {
 		Utils::enqueue_style( 'my_theme_main', 'main' );
 		Utils::enqueue_script( 'my_theme_main', 'main', array( 'jquery' ) );
 		wp_localize_script(
-			'my_main',
+			'my_theme_main',
 			'myMain',
 			array(
 				'ajaxUrl'            => admin_url( 'admin-ajax.php' ),
