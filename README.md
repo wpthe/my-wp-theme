@@ -1,5 +1,4 @@
 # My WordPress Theme Boilerplate
-Core plugin: <http://github.com/dpripa/my-wp-theme-core>.
 
 - [x] Ajax helper base class and examples
 - [x] Customizer helper base class and examples
@@ -16,5 +15,4 @@ Core plugin: <http://github.com/dpripa/my-wp-theme-core>.
 - [ ] Bootstrap complete integration (JS components)
 - [ ] I18n supports (.pot file)
 - [ ] WPML supports
-- [ ] Theme Documentation
-- [ ] Core Documentation
+- [ ] Documentation
