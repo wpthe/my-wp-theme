@@ -10,7 +10,7 @@ trait Singable {
 
 	private static $has_instance = false;
 
-	private function die_if_has_instance() {
+	private function check_singable_instance() {
 		if ( self::$has_instance ) {
 			wp_die( sprintf( __( 'Class <code>%s</code> must have one instance.', TEXTDOMAIN ), static::class ) ); // @codingStandardsIgnoreLine WordPress.Security.EscapeOutput.OutputNotEscaped
 		}

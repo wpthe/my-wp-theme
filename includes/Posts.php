@@ -9,7 +9,7 @@ class Posts {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		new Posts\Card();
 		new Posts\Ajax_Load_Cards();

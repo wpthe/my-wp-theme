@@ -9,7 +9,7 @@ class Integrations {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		new Integrations\ACF();
 		new Integrations\Polylang();

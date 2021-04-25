@@ -11,7 +11,7 @@ class Polylang {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		if ( function_exists( 'pll_the_languages' ) ) {
 			add_filter( 'my_theme_home_url', array( $this, 'home_url' ) );

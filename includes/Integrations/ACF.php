@@ -13,7 +13,7 @@ class ACF {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		if ( class_exists( 'ACF' ) && Customizer\Addition_General::get_setting( 'hide_acf_menu' ) ) {
 			add_filter( 'acf/settings/show_admin', '__return_false' );

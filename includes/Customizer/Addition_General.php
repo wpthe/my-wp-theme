@@ -20,7 +20,7 @@ class Addition_General extends Abstracts\Customizer\Section {
 	);
 
 	public function __construct( \WP_Customize_Manager $wp_customize ) {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		$wp_customize->add_section(
 			self::$section_key,

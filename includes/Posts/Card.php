@@ -11,7 +11,7 @@ class Card {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		add_filter( 'excerpt_more', array( $this, 'get_excerpt_more' ) );
 	}

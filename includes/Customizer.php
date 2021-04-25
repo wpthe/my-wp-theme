@@ -9,7 +9,7 @@ class Customizer {
 	use Abstracts\Singable;
 
 	public function __construct() {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'controls_enqueue_assets' ) );
 		add_action( 'customize_register', array( $this, 'register' ) );

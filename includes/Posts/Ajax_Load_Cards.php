@@ -14,7 +14,7 @@ class Ajax_Load_Cards extends Abstracts\Ajax_Action {
 	private $post_type;
 
 	public function __construct( string $post_type = 'post' ) {
-		$this->die_if_has_instance();
+		$this->check_singable_instance();
 
 		parent::__construct( 'my_load_cards' );
 
