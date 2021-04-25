@@ -4,15 +4,14 @@ const log = require( 'log-beautify' );
 const config = require( './config' );
 
 function setMainFileVersion() {
-	if ( fs.existsSync( config.basePath + config.mainFile.path ) ) {
-		fs.readFile( config.basePath + config.mainFile.path, 'utf8', function( err, data ) {
+	if ( fs.existsSync( config.rootPath + config.mainFile ) ) {
+		fs.readFile( config.rootPath + config.mainFile, 'utf8', function( err, data ) {
 			if ( err ) {
 				return console.error( err );
 			}
-			const prefix = config.mainFile.versionPrefix;
-			const result = data.replace( prefix + /(\d+\.)(\d+\.)(\d)/g, prefix + config.version );
+			const result = data.replace( /(\d+\.\d+\.\d+)/, config.version );
 
-			fs.writeFile( config.basePath + config.mainFile.path, result, 'utf8', function( err ) {
+			fs.writeFile( config.rootPath + config.mainFile, result, 'utf8', function( err ) {
 				if ( err ) {
 					return console.error( err );
 				}
@@ -34,12 +33,12 @@ function setPackageVersion( path ) {
 }
 
 function createArchive() {
-	const output = fs.createWriteStream( config.basePath + config.name + '.zip' );
+	const output = fs.createWriteStream( config.rootPath + config.name + '.zip' );
 	const archive = archiver( 'zip', {});
 
 	output.on( 'close', function() {
 		console.log( '\n' );
-		log.success_( '"' + config.name + '.zip" released under version ' + config.version + ' to the plugin folder.' );
+		log.success_( '"' + config.name + '.zip" released under version ' + config.version + ' to the root folder.' );
 		console.log( '\n' )
 	});
 
@@ -51,18 +50,18 @@ function createArchive() {
 
 	let directories = config.directories;
 	for ( let i = 0; i < directories.length; i++ ) {
-		archive.directory( config.basePath + directories[i], config.name + '/' + directories[i], null );
+		archive.directory( config.rootPath + directories[i], config.name + '/' + directories[i], null );
 	}
 
 	let files = config.files;
 	for ( let i = 0; i < files.length; i++ ) {
-		archive.file( config.basePath + files[i], { name: config.name + '/' + files[i] });
+		archive.file( config.rootPath + files[i], { name: config.name + '/' + files[i] });
 	}
 
 	archive.finalize();
 }
 
 setMainFileVersion();
-setPackageVersion( config.packageJson );
-setPackageVersion( config.composerJson );
+setPackageVersion( config.rootPath + config.packageJson );
+setPackageVersion( config.rootPath + config.composerJson );
 createArchive();

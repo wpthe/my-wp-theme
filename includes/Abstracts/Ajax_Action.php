@@ -1,8 +1,10 @@
 <?php
 
-namespace My_Theme\Ajax;
+namespace My_Theme\Abstracts;
 
-abstract class Base {
+abstract class Ajax_Action {
+
+	use Singable;
 
 	private $action;
 
@@ -13,6 +15,5 @@ abstract class Base {
 		add_action( "wp_ajax_nopriv_${action}", array( $this, 'callback' ) );
 	}
 
-	public function callback() {
-	}
+	abstract public function callback(): void;
 }

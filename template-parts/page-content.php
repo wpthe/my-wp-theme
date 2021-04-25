@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="pagination">' . esc_html__( 'Pages:', 'my_theme' ),
+				'before' => '<div class="pagination">' . esc_html__( 'Pages:', TEXTDOMAIN ),
 				'after'  => '</div>',
 			)
 		);

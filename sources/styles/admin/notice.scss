@@ -1,0 +1,18 @@
+.my-admin-notice__title {
+	margin: 20px 0 15px;
+	font-size: 24px;
+}
+
+.my-admin-notice__content {
+	margin-bottom: 15px;
+
+	> p {
+		margin: 0 0 10px;
+		padding: 0;
+		font-size: 16px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+}

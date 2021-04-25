@@ -14,9 +14,10 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="my_theme, my_core, my_plugin"/>
+			<property name="text_domain" type="array" value="my_theme, my_plugin"/>
 		</properties>
 		<exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain"/>
+		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
 	</rule>
 
 	<rule ref="Squiz.Commenting">

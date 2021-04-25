@@ -2,20 +2,20 @@
 
 namespace My_Theme\Walkers;
 
-use My_Theme\Utils;
+use My_Theme\Helpers;
 
 defined( 'ABSPATH' ) || exit;
 
 class Header_Menu extends \Walker_Nav_Menu {
 
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+	public function start_lvl( &$output, $depth = 0, $args = array() ): void {
 		if ( class_exists( 'acf_pro' ) ) {
 			$indent  = str_repeat( "\t", $depth );
 			$output .= "\n$indent<ul role='menu' class='dropdown-menu _my-ul-clean'>\n";
 		}
 	}
 
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ): void {
 		if ( class_exists( 'acf_pro' ) ) {
 			$indent      = $depth ? str_repeat( "\t", $depth ) : '';
 			$item_id     = 'menu-item-' . $item->ID;
@@ -37,7 +37,7 @@ class Header_Menu extends \Walker_Nav_Menu {
 				$attrs .= ' type="button" class="dropdown-toggle" data-toggle="dropdown"';
 
 			} elseif ( 'tel' === $type ) {
-				$attrs .= ' href="' . esc_attr( Utils::tel_to_url( $title ) ) . '"';
+				$attrs .= ' href="' . esc_attr( Helpers\General::tel_to_url( $title ) ) . '"';
 
 			} else {
 				$attrs .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
@@ -68,7 +68,7 @@ class Header_Menu extends \Walker_Nav_Menu {
 		}
 	}
 
-	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ): void {
 		if ( class_exists( 'acf_pro' ) ) {
 			if ( ! $element ) {
 				return;

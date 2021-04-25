@@ -1,22 +1,27 @@
 <?php
 
-namespace My_Theme\Ajax;
+namespace My_Theme\Posts;
 
-use My_Theme\Templates;
+use My_Theme\Abstracts;
+use My_Theme\Helpers;
 
 defined( 'ABSPATH' ) || exit;
 
-class Load_Cards extends Base {
+class Ajax_Load_Cards extends Abstracts\Ajax_Action {
+
+	use Abstracts\Singable;
 
 	private $post_type;
 
 	public function __construct( string $post_type = 'post' ) {
+		$this->die_if_has_instance();
+
 		parent::__construct( 'my_load_cards' );
 
 		$this->post_type = $post_type;
 	}
 
-	public function callback() {
+	public function callback(): void {
 		// TODO: rewrite. Reason: too much denial of standards.
 		// @codingStandardsIgnoreStart
 		// WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize
@@ -34,7 +39,7 @@ class Load_Cards extends Base {
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
-				Templates::get_card( $this->post_type, '', array( 'className' => $_POST['card_class'] ) );
+				Helpers\Pages::get_card_template( $this->post_type, '', array( 'className' => $_POST['card_class'] ) );
 			}
 		}
 		die();

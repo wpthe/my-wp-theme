@@ -3,6 +3,14 @@
     "./styles/main.scss",
     "./scripts/main.js"
   ],
+  "admin": [
+    "./styles/admin.scss",
+    "./scripts/admin.js"
+  ],
+  "customizer-controls": [
+    "./styles/customizer-controls.scss",
+    "./scripts/customizer-controls.js"
+  ],
   "admin-bar": [
     "./styles/admin-bar.scss"
   ],

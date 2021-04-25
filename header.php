@@ -14,20 +14,20 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php
 	wp_head();
-	echo \My_Core\Customize\Settings_Code_Fields::get_mod( 'head' ); // @codingStandardsIgnoreLine WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo Customizer\Addition_Code_Fields::get_setting( 'head' ); // @codingStandardsIgnoreLine WordPress.Security.EscapeOutput.OutputNotEscaped
 	?>
 </head>
 <body <?php body_class( 'my-page' ); ?> itemscope itemtype="http://schema.org/WebPage">
 <?php
 wp_body_open();
-Templates::get_part( 'load-icon' );
+Helpers\Pages::get_template_part( 'load-icon' );
 ?>
 
 <svg class="my-page__load-icon" style="z-index: 999999; position: fixed; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 54px" viewBox="0 0 32 32"><use xlink:href="#my-load-icon"></svg>
 <div class="my-page__load-overlay" style="z-index: 999998; position: fixed; background: #fff; top: 0; right: 0; bottom: 0; left: 0;"></div>
 
-<?php Templates::get_part( 'movebar' ); ?>
+<?php Helpers\Pages::get_template_part( 'movebar' ); ?>
 <div class="my-page__wrapper my-movebar__coupled">
 	<div class="my-page__body">
 		<?php
-		Templates::get_part( 'header-content' );
+		Helpers\Pages::get_template_part( 'header-content' );

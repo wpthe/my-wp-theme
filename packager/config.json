@@ -1,13 +1,14 @@
 {
 	"name": "my-wp-theme",
 	"version": "0.9.0",
-	"basePath": "../",
+	"rootPath": "../",
 	"mainFile": "style.css",
   "packageJson": "sources/package.json",
   "composerJson": "composer.json",
 	"directories": [
+    "acf-blocks",
+    "acf-json",
 		"assets",
-		"blocks",
 		"includes",
 		"languages",
 		"template-parts",

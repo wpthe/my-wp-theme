@@ -2,7 +2,7 @@
   "name": "dpripa/my-wp-theme",
   "version": "0.9.0",
   "type": "wordpress-theme",
-  "description": "Just my WordPress theme boilerplate",
+  "description": "Just my WordPress theme",
   "homepage": "https://github.com/dpripa/my-wp-theme",
   "license": "GPL <https://github.com/dpripa/my-wp-theme/blob/main/LICENSE>",
   "authors": [
@@ -24,13 +24,14 @@
     }
   },
   "require": {
-    "php": "7.0"
+    "php": "^7.2.0"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.3.1",
+    "squizlabs/php_codesniffer": "^3.6.0",
     "wp-coding-standards/wpcs": "^2.2.1"
   },
   "scripts": {
+    "optimize": "composer dump-autoload --optimize",
     "wpcs": "phpcs"
   }
 }

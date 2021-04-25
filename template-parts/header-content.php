@@ -12,8 +12,8 @@ defined( 'ABSPATH' ) || exit;
 				<button class="my-header__bars my-icon my-icon_bars" data-my-toggle="movebar"></button>
 			</div>
 			<div class="col-auto">
-				<a class="my-header__logo my-img" href="<?php echo esc_url( Posts::get_home_url() ); ?>">
-					<img data-src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo.svg' ) ); ?>" alt="Logo">
+				<a class="my-header__logo my-img" href="<?php echo esc_url( Helpers\Pages::get_home_url() ); ?>">
+					<img data-src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo.svg' ) ); ?>" alt="<?php echo esc_attr__( 'Logo', TEXTDOMAIN ); ?>">
 				</a>
 			</div>
 			<div class="col _my-text-right">

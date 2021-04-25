@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a class="my-card__img my-img" href="<?php echo esc_url( get_permalink() ); ?>" data-my-img-loaded-class="my-card__img_loaded">
-				<img data-src="<?php the_post_thumbnail_url( 'my_card' ); ?>" data-retina="<?php the_post_thumbnail_url( 'my_card_retina' ); ?>" alt="<?php echo esc_attr( __( 'Cover photo for', 'my_theme' ) . ': "' . get_the_title() . '"' ); ?>">
+				<img data-src="<?php the_post_thumbnail_url( 'my_card' ); ?>" data-retina="<?php the_post_thumbnail_url( 'my_card_retina' ); ?>" alt="<?php echo esc_attr( __( 'Cover photo for', TEXTDOMAIN ) . ': "' . get_the_title() . '"' ); ?>">
 			</a>
 		<?php endif; ?>
 

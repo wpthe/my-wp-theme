@@ -11,12 +11,12 @@ get_header();
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-10">
-				<?php Templates::get_part( 'breadcrumbs' ); ?>
-				<h1 class="my-section__title"><?php echo esc_html( Posts::get_title() ); ?></h1>
+				<?php Helpers\Pages::get_template_part( 'breadcrumbs' ); ?>
+				<h1 class="my-section__title"><?php echo esc_html( Helpers\Pages::get_title() ); ?></h1>
 				<?php
 				while ( have_posts() ) :
 					the_post();
-					Templates::get_content( 'page' );
+					Helpers\Pages::get_content_template( 'page' );
 
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();

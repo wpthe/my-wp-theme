@@ -1,0 +1,9 @@
+.nav-menus-php {
+
+	.acf-field {
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
