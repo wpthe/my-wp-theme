@@ -23,7 +23,7 @@ class WC {
 		}
 	}
 
-	public function after_setup_theme() {
+	public function after_setup_theme(): void {
 		add_theme_support( 'woocommerce' );
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-lightbox' );

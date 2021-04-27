@@ -1,12 +1,12 @@
 <?php
 
-namespace My_Theme\Abstracts\Customizer;
+namespace My_Theme\Customizer;
 
 use My_Theme\Abstracts;
 
 defined( 'ABSPATH' ) || exit;
 
-abstract class Section {
+abstract class Abstract_Section {
 
 	use Abstracts\Singable;
 

@@ -15,12 +15,12 @@ class Customizer {
 		add_action( 'customize_register', array( $this, 'register' ) );
 	}
 
-	public function controls_enqueue_assets() {
+	public function controls_enqueue_assets(): void {
 		Helpers\General::enqueue_style( 'my_theme_customizer_controls', 'customizer-controls', array( 'wp-color-picker' ) );
 		Helpers\General::enqueue_script( 'my_theme_customizer_controls', 'customizer-controls', array( 'jquery', 'customize-controls', 'wp-color-picker' ) );
 	}
 
-	public function register( \WP_Customize_Manager $wp_customize ) {
+	public function register( \WP_Customize_Manager $wp_customize ): void {
 		$wp_customize->add_panel(
 			'my_settings',
 			array(

@@ -6,13 +6,13 @@ defined( 'ABSPATH' ) || exit;
 
 class Yoast {
 
-	public static function get_breadcrumbs( string $before, string $after ) {
+	public static function get_breadcrumbs( string $before, string $after ): void {
 		if ( function_exists( 'yoast_breadcrumb' ) && ! is_front_page() ) {
 			yoast_breadcrumb( $before, $after );
 		}
 	}
 
-	public static function get_primary_term_id( int $post = 0, string $taxonomy = 'category' ) {
+	public static function get_primary_term_id( int $post = 0, string $taxonomy = 'category' ): int {
 		if ( ! $post ) {
 			$post = get_the_ID();
 		}
@@ -33,6 +33,6 @@ class Yoast {
 				return $terms[0]->term_id;
 			}
 		}
-		return false;
+		return 0;
 	}
 }

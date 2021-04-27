@@ -7,7 +7,7 @@ use const My_Theme\TEXTDOMAIN;
 
 defined( 'ABSPATH' ) || exit;
 
-class Addition_General extends Abstracts\Customizer\Section {
+class Addition_General extends Abstract_Section {
 
 	use Abstracts\Singable;
 

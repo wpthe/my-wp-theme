@@ -18,7 +18,7 @@ class Polylang {
 		}
 	}
 
-	public function home_url() {
+	public function home_url(): string {
 		return pll_home_url();
 	}
 }

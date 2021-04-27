@@ -24,7 +24,7 @@ class ACF {
 		}
 	}
 
-	public function autoload_blocks() {
+	public function autoload_blocks(): void {
 		$path = 'acf-blocks';
 		$dir  = get_theme_file_path( $path );
 
